@@ -1,0 +1,239 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    background: #007acc;
+    color: white;
+    padding: 50px 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #007acc;
+}
+
+/* Style for Icons in Section Headers */
+h2 i {
+    color: #007acc; /* Blue to match the theme */
+    margin-right: 10px;
+    font-size: 1.5rem; /* Increase the icon size */
+    vertical-align: middle; /* Align it properly with the text */
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+section {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Project Section */
+.project {
+    background-color: #e8f0fe;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-to-top:hover {
+    background-color: #005a99;
+}
+
+/* List Styles */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    background: #e8f0fe;
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Download Button */
+.download-btn {
+    display: inline-block;
+    text-align: center;
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    width: 200px;
+    margin: 20px auto;
+}
+
+.download-btn:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}
+
+/* Link Hover Effects */
+a {
+    color: #007acc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #005a99;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0; /* Default light text color */
+}
+
+header.dark-mode {
+    background-color: #1f1f1f;
+}
+
+section.dark-mode {
+    background-color: #1f1f1f; /* Darker section background */
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Dark Mode for Project Cards */
+.project.dark-mode {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Mode for List Items */
+ul li.dark-mode {
+    background-color: #2a2a2a; /* Dark list background */
+    color: #e0e0e0; /* Light text */
+    border: 1px solid #333;
+}
+
+/* Dark Mode for Headings and Text */
+h1.dark-mode, h2.dark-mode, p.dark-mode, ul li.dark-mode {
+    color: #ffffff; /* Bright text for dark mode */
+}
+
+/* Hover Effects in Dark Mode */
+ul li.dark-mode:hover {
+    background-color: #3a3a3a;
+    color: #ffffff;
+}
+
+/* Dark Mode for Download Button */
+.download-btn.dark-mode {
+    background-color: #bb86fc;
+    color: black;
+}
+
+.download-btn.dark-mode:hover {
+    background-color: #9a67ea;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #005a99;
+}
+
+.dark-mode .dark-mode-toggle {
+    background-color: #bb86fc;
+    color: black;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
